@@ -1,5 +1,19 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const backwardsWord = []
+  const word2 = []
+
+  for (i= 0; i < word.length; i++) {
+    word2.push(word[i])
+    backwardsWord.unshift(word[i])
+  }
+  
+  for (i= 0; i < word.length; i++) {
+    if (word2[i] !== backwardsWord[i]){
+      return false
+    }
+  }
+  return true
+
 }
 
 /* 
